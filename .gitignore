@@ -15,6 +15,7 @@ sites/all/README.txt
 sites/all/modules/README.txt
 sites/all/themes/README.txt
 .htaccess
+.project
 
 #for non core developer
 #only include "sites" folder without exclusions before
@@ -30,3 +31,4 @@ xmlrpc.php
 /scripts
 /themes
 
+master
