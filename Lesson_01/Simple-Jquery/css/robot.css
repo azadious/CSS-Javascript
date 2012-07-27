@@ -1,0 +1,71 @@
+h1, p {
+	position: absolute;
+	left: -9999px;
+}
+
+#intro h1,
+#intro p {
+position: relative;
+left: 10px;	
+margin: 0;
+padding: 0;
+}
+
+div {position: relative;}
+
+#wrapper {
+background: #bedfe4 url(../images/sun.png) no-repeat left -30px;
+border: 5px solid #402309;
+}
+
+#cloud-01 {
+	background: url(../images/clouds-01.png) no-repeat left -100px;
+}                                                         
+                                                          
+#cloud-02 {                                               
+	background: url(../images/clouds-02.png) no-repeat left top;
+}
+
+#mountains-03 {
+	background: url(../images/mountain-03.png) no-repeat left bottom;
+}
+
+#full-robot {
+	width: 271px;
+}
+
+#ground {
+	background: url(../images/ground-05.png) no-repeat left bottom;
+}
+
+#branding {
+	background: url(../images/robot-head.png) no-repeat center top;
+	width: 271px;
+	height: 253px;
+	z-index: 4;
+}
+
+#content {
+	background: url(../images/robot-torso.png) no-repeat center top;
+	width: 271px;
+	height: 164px;
+	z-index: 3;
+	margin-top: -65px;
+}
+
+#sec-content {
+	background: url(../images/robot-hips.png) no-repeat center top;
+	width: 271px;
+	height: 124px;
+	z-index: 2;
+	margin-top: -90px;
+	}
+
+#footer {
+	background: url('../images/robot-legs.png') no-repeat center top;
+	width: 271px;
+	height: 244px;
+	z-index: 1;
+	margin-top: -90px;
+	}
+

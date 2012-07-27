@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>World Time Clock</title>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		
+		<script type="text/javascript">
+		 $(document).ready(function() {
+		 	setInterval(function() {
+		 		var getdate = new Date();
+				var timeinstring=getdate.toLocaleTimeString();
+				$('.thai span').html(timeinstring);
+		 	},1000);
+		 	
+		 	setInterval(function() {
+		 		var getdate = new Date();
+				var hour = getdate.getHours();
+				var minute = getdate.getMinutes();
+				var second = getdate.getSeconds();
+				hour = hour+14;
+				if(hour>23) {
+					hour = hour - 23;
+				}
+				var timeusa = hour+':'+minute+':'+second;
+				$('.usa span').html(timeusa);
+		 	},1000);
+		 	
+		 	setInterval(function() {
+		 		var getdate = new Date();
+				var hour = getdate.getHours();
+				var minute = getdate.getMinutes();
+				var second = getdate.getSeconds();
+				hour = hour+7;
+				if(hour>23) {
+					hour = hour - 23;
+				}
+				var afarica = hour+':'+minute+':'+second;
+				$('.afarica span').html(afarica);
+		 	},1000);
+		 	
+		 	setInterval(function() {
+		 		var getdate = new Date();
+				var hour = getdate.getHours();
+				var minute = getdate.getMinutes();
+				var second = getdate.getSeconds();
+				hour = hour+11;
+				if(hour>23) {
+					hour = hour - 23;
+				}
+				var afarica = hour+':'+minute+':'+second;
+				$('.south-afarica span').html(afarica);
+		 	},1000);
+			
+		 });
+		</script>
+		
+		<style type="text/css">
+			body {
+				margin: 0px;
+				padding: 0px;
+				font-family: tahoma;
+			}
+			h1 {
+				text-align: center;
+				border-bottom: 1px solid #000000;
+				background: black;
+				color: white;
+			}
+			div.map {
+				margin: 0px auto;
+				width: 1200px;
+				height: 646px;
+				position: relative;
+				z-index: 1;
+			}
+			.pointer {
+				position: absolute;
+				z-index: 100;
+			}
+			.pointer span {
+				position: absolute;
+				top: -10px;
+				background: white;
+				padding: 5px 10px;
+				font-size: 13px;
+				opacity: 0.8;
+				filter: alpha(opacity=80);
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+			}
+			.thai {
+				top: 250px;
+				right: 280px;
+			}
+			.afarica {
+				top: 250px;
+				right: 550px;
+			}
+			.usa {
+				top: 180px;
+				right: 950px;
+			}
+			.south-afarica {
+				top: 340px;
+				right: 820px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<h1>World Time Clock</h1>
+		<div class="map">
+			<img src="img/map.png" alt="" />
+			<div class="pointer thai"><img src="img/pointer.png" alt="" /><span>NoData</span></div>
+			<div class="pointer afarica"><img src="img/pointer.png" alt="" /><span>NoData</span></div>
+			<div class="pointer usa"><img src="img/pointer.png" alt="" /><span>NoData</span></div>
+			<div class="pointer south-afarica"><img src="img/pointer.png" alt="" /><span>NoData</span></div>
+			
+			
+			
+			
+			
+		</div>
+		
+	</body>
+</html>

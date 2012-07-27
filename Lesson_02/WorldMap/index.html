@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>WorldMap</title>
+	<style type="text/css">
+		body {
+			margin: 0px;
+			padding: 0px;
+		}
+		h1 {
+			font-size: 250%;
+			text-align: center;
+			background: black;
+			margin: 0px 0 20px 0;
+			color: white;
+			padding: 10px;
+		}
+		#map {
+			margin: 0px auto;	
+			width: 1200px;
+			position: relative;
+		}
+		.pointer {
+			position: absolute;
+			z-index: 100;
+		}
+		.pointer span {
+			white-space: nowrap;
+			position: absolute;
+			width: auto;
+			top: -20px;
+			left: 30px;
+			background: white;
+			padding: 5px 10px;
+			font-size: 13px;
+			opacity: 0.8;
+			filter: alpha(opacity=80);
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+		}
+		.thai {
+			top: 250px;
+			right: 280px;
+		}
+		.afarica {
+			top: 250px;
+			right: 550px;
+		}
+		.usa {
+			top: 180px;
+			right: 950px;
+		}
+		.south-america {
+			top: 340px;
+			right: 820px;
+		}
+	</style>
+</head>
+<body>
+	<h1>WorldMap</h1>
+	
+	<div id="map">
+		<img src="img/map.png" alt="" class="map" />
+		
+		<div class="pointer thai">
+			<img src="img/pointer.png" alt="" />
+			<span>Thailand</span>
+		</div>
+		
+		<div class="pointer afarica">
+			<img src="img/pointer.png" alt="" />
+			<span>Africa</span>
+		</div>
+		
+		<div class="pointer usa">
+			<img src="img/pointer.png" alt="" />
+			<span>America</span>
+		</div>
+		
+		<div class="pointer south-america">
+			<img src="img/pointer.png" alt="" />
+			<span>South America</span>
+		</div>
+		
+	</div><!-- map -->
+	
+	
+</body>
+</html>

@@ -1,0 +1,111 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import blueprint/reset
+// To configure blueprint, edit the partials/base.sass file.
+@import partials/02
+// Import all the default blueprint modules so that we can access their mixins.
+@import blueprint
+// Import the non-default scaffolding module.
+@import blueprint/scaffolding
+@import compass/css3/box-shadow
+
+// To generate css equivalent to the blueprint css but with your
+// configuration applied, uncomment:
+// @include blueprint
+
+// If you are doing a lot of stylesheet concatenation, it is suggested
+// that you scope your blueprint styles, so that you can better control
+// what pages use blueprint when stylesheets are concatenated together.
+body
+  +blueprint-typography(true)
+  +blueprint-utilities
+  +blueprint-debug
+  +blueprint-interaction
+  // Remove the scaffolding when you're ready to start doing visual design.
+  // Or leave it in if you're happy with how blueprint looks out-of-the-box
+form
+  +blueprint-form
+  // You'll probably want to remove the scaffolding once you start styling your site.
+  +blueprint-scaffolding
+
+// Page layout can be done using mixins applied to your semantic classes and IDs:
+body 
+  #warp 
+    width: 960px
+    margin: 20px auto
+    //border: 1px solid #808080
+    padding-top: 10px
+    //box-shadow: (#808080 0px 0px 10px)
+    #top , #content , #footer
+      +container
+      
+    #top
+      +prepend-top(10px)
+      position: relative
+      ul.navigation
+        margin: 0px 0 20px 0
+        padding: 0px
+        float: left
+        border-bottom: 1px solid #336633
+        width: 100%
+        background: #336633
+        //display: none
+        li
+          float: left
+          list-style: none
+          
+          border-right: 1px solid #FFFFFF
+          a
+            color: #FFFFFF
+            text-decoration: none
+            padding: 8px
+            background: #009900
+            float: left
+        a:hover , li:first-child a 
+          background: #336633
+      h1
+        //border-bottom: 1px dotted #808080
+        padding: 10px 0px
+        //background-color: #1262B3
+        font-size: 180%
+        //color: #FFFFFF
+        font-weight: bold
+        font-family: 'Trebuchet MS'
+        //text-align: center
+        display: none
+        //color: #0066CC
+        //background: #336633
+    #content
+      color: #808080
+      #first
+        +column(12,true)
+        +prepend(12)
+        
+        h1
+          font-size: 120%
+          font-weight: bold
+          font-family: 'Trebuchet MS'
+        p
+          text-indent: 10px
+      #second
+        +column(12,true)
+        +pull(24, true)
+        background: #EBFFEB
+        h1
+          font-size: 120%
+          font-weight: bold
+          padding: 10px 20px 0px
+          color: #336600
+          font-family: 'Trebuchet MS'
+        p
+          padding: 0px 20px     
+          color: #339900   
+
+    #footer
+      border-top: 1px solid #888888
+      color: #888888
+      text-align: left
+    
+        
+
+
+

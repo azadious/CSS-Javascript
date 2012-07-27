@@ -1,0 +1,75 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import blueprint/reset
+// To configure blueprint, edit the partials/base.sass file.
+@import partials/02
+// Import all the default blueprint modules so that we can access their mixins.
+@import blueprint
+// Import the non-default scaffolding module.
+@import blueprint/scaffolding
+@import compass/css3/box-shadow
+
+// To generate css equivalent to the blueprint css but with your
+// configuration applied, uncomment:
+// @include blueprint
+
+// If you are doing a lot of stylesheet concatenation, it is suggested
+// that you scope your blueprint styles, so that you can better control
+// what pages use blueprint when stylesheets are concatenated together.
+body
+  +blueprint-typography(true)
+  +blueprint-utilities
+  +blueprint-debug
+  +blueprint-interaction
+  // Remove the scaffolding when you're ready to start doing visual design.
+  // Or leave it in if you're happy with how blueprint looks out-of-the-box
+form
+  +blueprint-form
+  // You'll probably want to remove the scaffolding once you start styling your site.
+  +blueprint-scaffolding
+
+// Page layout can be done using mixins applied to your semantic classes and IDs:
+body 
+  #warp 
+    font-family: arial
+    width: 800px
+    margin: 20px auto
+    //border: 1px solid #808080
+    padding-top: 10px
+    box-shadow: (#808080 0px 0px 10px)
+    #top , #content , #footer
+      +container
+      
+    #top
+      +prepend-top(10px)
+      .navigation
+        display: none
+      h1
+        //border-bottom: 1px solid #1262B3
+        padding: 20px 10px
+        background-color: #1262B3
+        font-size: 300%
+        color: #FFFFFF
+        font-weight: bold
+    #content
+      color: #808080
+      #first
+        +column(12)
+        h1
+          font-size: 120%
+          font-weight: bold
+        p
+          text-indent: 10px
+      #second
+        +column(12,true)
+        h1
+          font-size: 120%
+          font-weight: bold
+    #footer
+      border-top: 1px solid #888888
+      color: #888888
+      text-align: right
+    
+        
+
+
+

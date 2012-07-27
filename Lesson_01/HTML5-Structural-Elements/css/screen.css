@@ -1,0 +1,68 @@
+* {
+	font-family: Tahoma;
+}
+.clear {
+	clear: both;
+}
+#wrap {
+	width: 960px;
+	margin: 0px auto;
+	padding: 0px;
+}
+#head {
+	width: 100%;
+	float: left;
+	padding-bottom: 20px;
+}
+#head h1 {
+	text-align: left;
+	margin-top: 20px;
+	font-family: 'Palatino Linotype';
+	font-size: 500%;
+}
+#head ul {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	background: black;
+	float: left;
+}
+#head ul li {
+	float: left;
+	list-style: none;
+	margin: 0px;
+	padding: 10px 20px;
+}
+#head ul li a {
+	color: white;
+	text-decoration: none;
+}
+#content {
+	width: 630px;
+	float: left;
+}
+#content .contentbox {
+	clear: both;
+	margin: 10px 0px 30px;
+	float: left;
+}
+#content h1 {
+	font-size: 120%;
+}
+#content img {
+	width: 40%;
+	float: left;
+	margin-right: 15px;
+}
+#sidebar {
+	width: 300px;
+	float: right;
+}
+#sidebar h1 {
+	font-size: 120%;
+}
+#footer {
+	width: 100%;
+	float: left;
+	border-top: 1px solid black;
+}

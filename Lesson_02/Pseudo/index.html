@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Pseudo</title>
+	
+	<style type="text/css">
+	
+		/* Pseudo For Form */
+		#form input:disabled {
+			background: #E6E6E6;
+		}
+		#form input:enabled {
+			background: #FCEE21;
+		}
+		#form input:focus {
+			background: #FFFFFF;
+		}
+		
+		/* Content */
+		#content:target {
+			background: #3FA9F5;
+		}
+		
+		/* Number Based */
+		#number-based li:first-child {
+			color: yellow;
+		}
+		#number-based li:last-child {
+			color: red;
+		}
+		
+		#number-based li:nth-child(2) {
+			color: green;
+		}
+		#number-based li:nth-child(3n) {
+			color: blue;
+		}
+		h1:first-of-type {
+			color: #3FA9F5;
+		}
+		h1:last-of-type {
+			color: gray;
+		}
+		h1:nth-of-type(2) {
+			color: purple;
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<h1>Form Pseudo Class</h1>
+	<form action="" id="form">
+		<label for="">Name 001</label>
+		<input type="" disabled="true" /> <br />
+		
+		<label for="">Name 002</label>
+		<input type="" /> <br />
+		
+		<label for="">Name 003</label>
+		<input type="" /> <br />
+		
+	</form>
+	
+	<hr />
+	
+	<h1>#Target</h1>
+	<div id="content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<a href="#content">Please Click</a>
+	</div><!-- content -->
+	
+	<hr />
+	
+	<h1>Number Based</h1>
+	<ul id="number-based">
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+	</ul>	<hr />
+
+
+	
+</body>
+</html>

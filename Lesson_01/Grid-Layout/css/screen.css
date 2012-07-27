@@ -1,0 +1,44 @@
+#head {
+	padding-bottom: 20px;
+}
+#head h1 {
+	text-align: left;
+	margin-top: 20px;
+	font-family: 'Palatino Linotype';
+	font-size: 500%;
+}
+#head ul {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	background: black;
+	float: left;
+}
+#head ul li {
+	float: left;
+	list-style: none;
+	margin: 0px;
+	padding: 10px 20px;
+}
+#head ul li a {
+	color: white;
+	text-decoration: none;
+}
+#content .contentbox {
+	clear: both;
+	margin: 10px 0px 30px;
+}
+#content h1 {
+	font-size: 120%;
+}
+#content img {
+	width: 40%;
+	float: left;
+	margin-right: 15px;
+}
+#sidebar h1 {
+	font-size: 120%;
+}
+#footer {
+	border-top: 1px solid black;
+}
