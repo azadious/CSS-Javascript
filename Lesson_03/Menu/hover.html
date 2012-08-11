@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu</title>
+	
+	<style type="text/css">
+		#container {
+			width: 350px;
+			margin: 0px auto;
+		}
+		ul {
+			margin: 0px;
+			padding: 0px;
+		}
+		ul li {
+			cursor: pointer;
+		}
+		ul > li {
+			width: 310px;
+			background: black;
+			color: white;
+			padding: 10px 0px 10px 10px;
+			list-style: none;
+			font-family: tahoma;
+			border-bottom: 1px solid white;
+			position: relative;
+		}
+		li > ul {
+			display: none;
+			margin: 10px 0 -9px -10px;
+		}
+		li > ul > li {
+			font-size: 90%;	
+			background: white;
+			color: black;
+			width: 308px;
+			border: none;
+			border-left: 1px solid gray;
+			border-right: 1px solid gray;
+			position: relative;
+			right: 0px;
+		}
+	</style>
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			
+			$('#container > ul > li').mouseenter(function(){
+				$('#container > ul > li >ul').slideUp();
+				$(this).children('ul').slideDown();
+			});
+			
+			$('#container > ul > li').mouseleave(function(){
+				$(this).children('ul').slideUp();
+			});
+			
+		});
+		
+	</script>
+</head>
+<body>
+	
+	
+	<div id="container">
+		
+		<ul>
+			<li>Menu - 1
+				<ul>
+					<li>Submenu - 1</li>
+					<li>Submenu - 2</li>
+					<li>Submenu - 3</li>
+				</ul>
+			</li>
+			<li>Menu - 2
+				<ul>
+					<li>Submenu - 1</li>
+					<li>Submenu - 2</li>
+					<li>Submenu - 3</li>
+				</ul>
+			</li>
+			<li>Menu - 3
+				<ul>
+					<li>Submenu - 1</li>
+					<li>Submenu - 2</li>
+					<li>Submenu - 3</li>
+				</ul>
+			</li>
+			<li>Menu - 4
+				<ul>
+					<li>Submenu - 1</li>
+					<li>Submenu - 2</li>
+					<li>Submenu - 3</li>
+				</ul>
+			</li>
+		</ul>
+		
+	</div>
+	
+	
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Click Show</title>
+	
+	<style type="text/css">
+		
+		.contentbox {
+			width: 300px;
+		}
+		
+	</style>
+	
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			// Use if for check element display status
+			$('.contentbox button').click(function(){
+				
+				var pStatus = $(this).siblings('p').css('display');
+				if(pStatus == 'none'){
+					$(this).siblings('p').show();
+					$(this).html('hide');
+				}else {
+					$(this).siblings('p').hide();
+					$(this).html('show');
+				}
+				console.log(pStatus);
+			});
+		
+		});
+		
+	</script>
+	
+	
+	
+</head>
+<body>
+	
+	<div class="contentbox">
+		<button>Click Me</button>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	
+	<div class="contentbox">
+		<button>Click Me</button>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>ToolTip</title>
+	
+	<style type="text/css">
+		#container {
+			width: 350px;
+			margin: 0px auto;
+		}
+		ul {
+			margin: 0px;
+			padding: 0px;
+		}
+		li {
+			float: left;
+			width: 330px;
+			list-style: none;
+			margin: 10px 0 0 0;
+			background-color: #FFF6BF;
+			padding: 10px 10px;
+			position: relative;
+		}
+		img {
+			float: left;
+			margin: 0 10px 0 0px;
+		}
+		p {
+			padding: 0px;
+			margin: 0px;
+		}
+		a {
+			color: #666666;
+			text-decoration: none;
+			font-family: tahoma;
+			font-size: 80%;
+			float: left;
+		}
+		.tooltip {
+			display: none;
+			position: absolute;
+			border: 1px solid #333;
+			background-color: #ffed8a;
+			padding: 2px 6px;
+			width: 160px;
+			bottom: 10px;
+			right: 10px;
+		}
+	</style>
+	
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			
+			$('ul li a').hover(function() {
+				
+				var titleText = $(this).attr('title');
+				$(this)
+					.data('tipText', titleText)
+					.removeAttr('title');
+				$('<p class="tooltip"></p>')
+					.text(titleText)
+					.appendTo(this)
+					.fadeIn('slow');
+		
+			}, function() {
+			
+				$(this).attr('title', $(this).data('tipText'));
+				$('.tooltip').remove();
+			
+			});
+			
+		});
+		
+	</script>
+	
+</head>
+<body>
+	
+	<div id="container">
+		
+		<ul>
+			<li><a href="" title="This is title attribute list 01">
+					<img src="img/01.jpg" alt="" />
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
+				</a></li>
+			<li><a href="" title="This is title attribute list 02">
+					<img src="img/02.jpg" alt="" />
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
+				</a></li>
+			<li><a href="" title="This is title attribute list 03">
+					<img src="img/03.jpg" alt="" />
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
+				</a></li>
+			<li><a href="" title="This is title attribute list 04">
+					<img src="img/04.jpg" alt="" />
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
+				</a></li>
+		</ul>
+		
+		
+	</div><!-- container -->
+	
+	
+</body>
+</html>
