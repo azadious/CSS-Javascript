@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Queue</title>
+	
+	<style type="text/css">
+		.animate {
+			background: green;
+			position: absolute;
+			top: 100px;
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			
+			function startanimate() {
+				$('.animate').animate({left:'+=100'},1000);
+				$('.animate').animate({left:'+=100'},1000);
+				$('.animate').animate({left:'+=100'},1000);
+				$('.animate').animate({left:'+=100'},1000);
+			}
+			
+			function displayqueue(){
+				var rest_of_queue = $('.animate').queue('fx').length;
+				$('span.queue').text(rest_of_queue);
+				setTimeout(displayqueue,100);
+			}
+			
+			$('#start').click(function(){
+				startanimate();
+				displayqueue();
+			});
+			
+			$('#stop').click(function(){
+				$('.animate').clearQueue();
+				$('.animate').stop();
+			});
+			
+			
+			
+		});
+		
+		
+	</script>
+	
+</head>
+<body>
+	
+	<div class="animate"></div>
+	
+	<div><span>The rest queue :</span><span class="queue"></span></div>
+	<button id="start">Start</button>
+	<button id="stop">Stop</button>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>No Queue</title>
+	
+	<style type="text/css">
+		.animate {
+			background: green;
+			position: absolute;
+			top: 100px;
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			
+				function startanimate(){
+					$('.animate').animate({left:'+=100'},1000);
+					$('.animate').animate({top:'+=100'},{duration:1000,queue:false});
+				}
+				$('button').click(function(){
+					startanimate();
+				});
+		});
+		
+		
+	</script>
+	
+</head>
+<body>
+	
+	<button>start</button>
+	<div class="animate"></div>
+	
+	
+</body>
+</html>
