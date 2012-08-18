@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Mouse Effect</title>
+	
+	<style type="text/css">
+		
+		.outbox {
+			background-color: green;
+			padding: 20px;
+			width: 200px;
+			height: 200px;
+			margin-bottom: 30px;
+		}
+		.inbox {
+			background-color: yellow;
+			width: 100px;
+			height: 100px;
+		}
+		
+	</style>
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$('.outbox:eq(0)').mouseout(function(){
+				$(this).children('span').html('mouseout');
+				
+			});
+			
+			$('.outbox:eq(1)').mouseleave(function(){
+				$(this).children('span').html('mouseout');
+			});
+			
+		});
+	</script>
+	
+</head>
+<body>
+	
+	
+	<div class="outbox">
+		<div class="inbox"></div>
+		<span></span>
+	</div>
+	
+	<div class="outbox">
+		<div class="inbox"></div>
+		<span></span>
+	</div>
+	
+</body>
+</html>

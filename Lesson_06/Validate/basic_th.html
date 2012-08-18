@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Validate Form</title>
+	
+	<style type="text/css">
+		label {
+			width: 60px;
+			float: left;
+			margin-right: 10px;
+		}
+		label.error {
+			color: red;
+			position: absolute;
+			left: 250px;
+			width: 500px;
+		}
+	</style>
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.js"></script>
+	<script type="text/javascript" src="js/messages_th.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#myform').validate();
+		});
+	</script>
+
+</head>
+<body>
+	
+	<form action="" id="myform">
+		
+		<label for="">Name</label>
+		<input type="text" name="firstname" class="required" /><br />
+		
+		<label for="">Password</label>
+		<input type="password" name="password" class="required" /><br />
+		
+		<label for="">Email</label>
+		<input type="text" name="email" class="required email" /><br />
+		
+		<input type="submit" />
+		
+	</form>
+	
+	
+</body>
+</html>

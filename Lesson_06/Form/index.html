@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+	
+	<style type="text/css">
+		label {
+			width: 50px;
+			float: left;
+			margin-right: 20px;
+		}
+	</style>
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.blur').blur(function(){
+				var classname = $(this).attr('class');
+				alert(classname);
+			});
+			
+			$('.change').change(function(){
+				var classname = $(this).attr('class');
+				alert(classname);
+			});
+			
+			$('.focus').focus(function(){
+				var classname = $(this).attr('class');
+				alert(classname);
+			});
+			
+			$('.value').blur(function(){
+				var inputvalue = $(this).val();
+				alert(inputvalue);
+			});
+		});
+	</script>
+	
+</head>
+<body>
+	
+	<form action="">
+		
+		<label for="">Blur</label>
+		<input type="" class="blur" /><br/>
+	
+		<label for="">Change</label>
+		<input type="" class="change" /><br/>
+		
+		<label for="">Focus</label>
+		<input type="" class="focus" /><br/>
+		
+		<label for="">Value</label>
+		<input type="" class="value" /><br/>
+	
+	
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Validate Form</title>
+	
+	<style type="text/css">
+		label {
+			width: 60px;
+			float: left;
+			margin-right: 10px;
+		}
+		input.error {
+			background: red;
+		}
+		label.error {
+			color: red;
+			position: absolute;
+			left: 250px;
+			width: 500px;
+		}
+	</style>
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#myform').validate({
+				rules: {
+					file: {
+						required: true,
+						accept: "jpg"
+					}
+				}
+			});
+		});
+	</script>
+
+</head>
+<body>
+	
+	<form action="" id="myform" enctype="multipart/form-data">
+		
+		<label for="">File</label>
+		<input type="file" name="file" /><br />
+		
+		<label for="">&nbsp;</label>
+		<input type="submit" />
+		
+	</form>
+	
+	
+</body>
+</html>
