@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Image Gallery</title>
+	
+	<style type="text/css">
+		#container {
+			width: 960px;
+			margin: 0 auto;
+			padding: 10px;
+			position: relative;
+		}
+		h1 {
+			font-family: 'New Time Roman';
+			color: #333333;
+			margin: 0px 0 10px 0;
+			padding: 0px;
+		}
+		ul {
+			margin: 0px;
+			padding: 0px;
+		}
+		li {
+			list-style: none;
+			float: left;
+		}
+		li img {
+			float: left;
+			width: 200px;
+			margin: 0 10px 10px 0px;
+			border: 5px solid #666666;
+			cursor: pointer;
+		}
+		.displayimg {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			display: none;
+		}
+		.displayimg span {
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			padding: 5px;
+			color: white;
+			background: black;
+		}
+		.displayimg img {
+			border-radius: 20px;
+			box-shadow: 0px 0px 5px #000000;
+			cursor: pointer;
+		}
+		.clear {
+			clear: both;
+		}
+	</style>
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$('.gallery img').click(function(){
+				var filename = $(this).attr('src');
+				$('.displayimg').hide();
+				$('.displayimg img').remove();
+				
+				$('.displayimg').append('<img src=" '+ filename + ' "/>');
+				$('.displayimg').show('scale');
+			});
+			
+			$('.displayimg').dblclick(function(){
+				$(this).hide('scale');
+				$(this).children('img').remove();
+			});
+			
+			$('.displayimg').draggable();
+			
+		});
+	</script>
+	
+</head>
+<body>
+	
+	<div id="container">
+		<h1>My Gallery</h1>
+		<div class="gallery">
+			<ul>
+				<li><img src="img/01.jpg" alt="" /></li>
+				<li><img src="img/02.jpg" alt="" /></li>
+				<li><img src="img/03.jpg" alt="" /></li>
+				<li><img src="img/04.jpg" alt="" /></li>
+				<li><img src="img/05.jpg" alt="" /></li>
+				<li><img src="img/06.jpg" alt="" /></li>
+				<li><img src="img/07.jpg" alt="" /></li>
+				<li><img src="img/08.jpg" alt="" /></li>
+				<li><img src="img/09.jpg" alt="" /></li>
+				<li><img src="img/10.jpg" alt="" /></li>
+				<li><img src="img/11.jpg" alt="" /></li>
+				<li><img src="img/12.jpg" alt="" /></li>
+			</ul>
+		</div>
+		<div class="displayimg"><span>Double Click To Close Image</span></div>
+		<div class="clear"></div>
+	</div>
+	
+</body>
+</html>
