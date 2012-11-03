@@ -12,3 +12,6 @@ Basic HTML , CSS
      
 ** Grid960 CSS Framwork
 	 link -> http://960.gs/
+	 
+** Install Zen coding link
+	 link -> http://zen-coding.ru/eclipse/updates/ 
